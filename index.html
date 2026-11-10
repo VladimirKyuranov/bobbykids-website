@@ -3,43 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bobby Kids – Privacy Policy</title>
+<title>Bobby Kids – Learn and Play</title>
+<meta name="description" content="Bobby Kids is a gentle learning game for children aged 2 to 8: learn words, take fun quizzes and play memory, sorting and shadow games. No ads.">
 <style>
-  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #222; background: #fff; max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
-  h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
-  h2 { font-size: 1.2rem; margin-top: 2rem; }
-  .date { color: #666; margin-top: 0; }
-  a { color: #1a62c9; }
+  :root {
+    --sky: #dff1ff;
+    --grass: #5cb85c;
+    --grass-dark: #2f7d32;
+    --sun: #ffc531;
+    --text: #23412a;
+    --muted: #4f6b55;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Roboto, system-ui, sans-serif; color: var(--text); background: linear-gradient(#bfe4ff 0, var(--sky) 420px, #f3fbec 900px, #e7f6d9 100%); line-height: 1.6; }
+  a { color: var(--grass-dark); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { padding: 48px 0 32px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+  h1 { font-family: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 800; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1.05; margin: 0 0 12px; }
+  h1 span { color: #e8458b; }
+  .lead { font-size: 1.2rem; color: var(--muted); margin: 0 0 24px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
+  .badges li { background: #fff; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+  .cta { display: inline-block; background: var(--sun); color: #3b2a00; font-family: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 800; font-size: 1.2rem; padding: 12px 26px; border-radius: 999px; box-shadow: 0 4px 0 #d89c00; text-decoration: none; }
+  .cta small { display: block; font-family: inherit; font-weight: 700; font-size: 0.8rem; }
+
+  .phone { width: 100%; max-width: 300px; margin: 0 auto; border-radius: 34px; border: 10px solid #1f2a22; background: #1f2a22; box-shadow: 0 18px 40px rgba(20,60,20,.25); overflow: hidden; }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 24px; }
+
+  section { padding: 40px 0; }
+  h2 { font-family: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 800; font-size: 2rem; margin: 0 0 8px; text-align: center; }
+  .section-lead { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 32px; }
+
+  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .mode { background: var(--card); border-radius: 24px; padding: 24px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+  .mode h3 { font-family: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-size: 1.5rem; margin: 0 0 6px; }
+  .mode p { margin: 0; color: var(--muted); }
+  .mode .icon { font-size: 2rem; }
+
+  .shots { display: flex; gap: 20px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; }
+  .shots figure { flex: 0 0 220px; margin: 0; scroll-snap-align: center; text-align: center; }
+  .shots img { width: 100%; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+  .shots figcaption { font-weight: 700; margin-top: 8px; }
+
+  .parents { background: #fff; border-radius: 28px; padding: 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+  .parents ul { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 32px; }
+  .parents li { margin-bottom: 8px; break-inside: avoid; }
+
+  footer { padding: 32px 0 48px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+  footer a { margin: 0 8px; }
+
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .badges { justify-content: center; }
+    .modes { grid-template-columns: 1fr; }
+    .parents ul { columns: 1; }
+    .phone { max-width: 240px; }
+  }
 </style>
 </head>
 <body>
-<h1>Bobby Kids – Privacy Policy</h1>
-<p class="date">Effective date: 10 November 2026</p>
 
-<p>Bobby Kids is an educational game for young children, made by Vladimir Kyuranov, publishing as Eldergrove Myths ("we", "us"). We care about children's privacy. This policy explains what happens to information when you use the app.</p>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Bobby Kids<br><span>learn &amp; play</span></h1>
+      <p class="lead">A gentle first learning game for little ones. Children discover hundreds of colourful pictures with spoken names, then practise with simple quizzes and playful games.</p>
+      <ul class="badges">
+        <li>Ages 2–8</li>
+        <li>No ads</li>
+        <li>No data collected</li>
+        <li>English &amp; Bulgarian</li>
+      </ul>
+      <span class="cta">Coming soon to Google Play<small>Android phones and tablets</small></span>
+    </div>
+    <div class="phone"><img src="images/home.jpg" alt="Bobby Kids home screen with Learn, Quiz and Play buttons" width="540" height="1186"></div>
+  </div>
+</header>
 
-<h2>The short version</h2>
-<p>Bobby Kids does not collect, store on our servers, or share any personal information. There are no accounts, no ads, no analytics and no tracking.</p>
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Three ways to learn</h2>
+      <p class="section-lead">Everything is built around everyday topics children love: animals, fruits, vegetables, food, vehicles, clothes, kitchen and home, professions, musical instruments, numbers, colours and shapes.</p>
+      <div class="modes">
+        <div class="mode">
+          <div class="icon" aria-hidden="true">📖</div>
+          <h3>Learn</h3>
+          <p>Tap a picture and hear its name. Big, friendly cards make first words easy to explore at the child's own pace.</p>
+        </div>
+        <div class="mode">
+          <div class="icon" aria-hidden="true">❓</div>
+          <h3>Quiz</h3>
+          <p>Find Me, Count Me and Collect &amp; Count turn new words and numbers into short, encouraging challenges.</p>
+        </div>
+        <div class="mode">
+          <div class="icon" aria-hidden="true">🧩</div>
+          <h3>Play</h3>
+          <p>Memory, Sort Them, Match the Shadow and Where Is the Sun? build attention, logic and visual skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Information we collect</h2>
-<p>None. The app does not ask for a name, email, location, photos, contacts or any other personal information, and it does not send information about you or your child to us or to any third party.</p>
+  <section>
+    <div class="wrap">
+      <h2>A peek inside</h2>
+      <p class="section-lead">Swipe to see more.</p>
+      <div class="shots">
+        <figure><img src="images/learn.jpg" alt="Learn screen showing a grid of fruits" loading="lazy" width="540" height="1186"><figcaption>Learn new words</figcaption></figure>
+        <figure><img src="images/memory.jpg" alt="Memory game with animal cards" loading="lazy" width="540" height="1186"><figcaption>Memory game</figcaption></figure>
+        <figure><img src="images/shadow.jpg" alt="Match the Shadow game with vehicles" loading="lazy" width="540" height="1186"><figcaption>Match the shadow</figcaption></figure>
+        <figure><img src="images/sorting.jpg" alt="Sort Them game with vehicles and clothes" loading="lazy" width="540" height="1186"><figcaption>Sort them</figcaption></figure>
+        <figure><img src="images/categories.jpg" alt="Category menu with animals, fruits, food and more" loading="lazy" width="540" height="1186"><figcaption>Many topics</figcaption></figure>
+        <figure><img src="images/games.jpg" alt="Play menu listing four games" loading="lazy" width="540" height="1186"><figcaption>Fun games</figcaption></figure>
+      </div>
+    </div>
+  </section>
 
-<h2>Information stored on the device</h2>
-<p>To work properly, the app saves a few things only on your device: game progress (such as unlocked levels), settings (such as language and sound) and whether the full version has been purchased. This information never leaves the device and is removed when you uninstall the app.</p>
+  <section>
+    <div class="wrap parents">
+      <h2>For parents</h2>
+      <p class="section-lead">Made to be a calm, safe space for small children.</p>
+      <ul>
+        <li>No advertising and no tracking.</li>
+        <li>No accounts, no chat, no links out of the app.</li>
+        <li>Progress is saved only on your device.</li>
+        <li>Levels grow gently in difficulty as your child plays.</li>
+        <li>Free to try. A one-time purchase unlocks all content, with no subscriptions.</li>
+        <li>Purchases and settings sit behind a parent check.</li>
+      </ul>
+    </div>
+  </section>
+</main>
 
-<h2>In-app purchase</h2>
-<p>The app offers a one-time purchase that unlocks all content. Purchases are only possible after an adult answers a parent check. Payments are processed entirely by Google Play; we never see or receive payment details. Google's handling of purchase information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<footer>
+  <div class="wrap">
+    <p><a href="privacy.html">Privacy policy</a> · <a href="mailto:eldergrove_myths@abv.bg">Contact</a></p>
+    <p>© 2026 Vladimir Kyuranov · Eldergrove Myths</p>
+  </div>
+</footer>
 
-<h2>Advertising and third parties</h2>
-<p>The app shows no advertising and contains no third-party analytics or advertising services. There are no links to social networks or external websites for children.</p>
-
-<h2>Children's privacy</h2>
-<p>Bobby Kids is designed for children aged 8 and under and follows the Google Play Families Policy. Because we do not collect personal information, we do not collect personal information from children, in line with the Children's Online Privacy Protection Act (COPPA) and the EU General Data Protection Regulation (GDPR).</p>
-
-<h2>Changes to this policy</h2>
-<p>If we change how the app handles information, we will update this page and the effective date above.</p>
-
-<h2>Contact</h2>
-<p>If you have any questions about this policy, please contact us at <a href="mailto:eldergrove_myths@abv.bg">eldergrove_myths@abv.bg</a>.</p>
 </body>
 </html>
