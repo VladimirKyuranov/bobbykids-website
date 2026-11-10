@@ -1,0 +1,73 @@
+:root {
+  --sky: #dff1ff;
+  --grass-dark: #2f7d32;
+  --sun: #ffc531;
+  --text: #23412a;
+  --muted: #4f6b55;
+  --card: #ffffff;
+  --round: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Roboto, system-ui, sans-serif; color: var(--text); background: linear-gradient(#bfe4ff 0, var(--sky) 420px, #f3fbec 900px, #e7f6d9 100%); line-height: 1.6; }
+a { color: var(--grass-dark); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+/* top bar with language switch */
+.topbar { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; }
+.topbar .home { font-family: var(--round); font-weight: 800; text-decoration: none; color: var(--text); }
+.lang { display: inline-flex; background: #fff; border-radius: 999px; padding: 4px; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.lang a, .lang span { padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; text-decoration: none; color: var(--muted); }
+.lang span[aria-current] { background: var(--sun); color: #3b2a00; }
+
+/* landing */
+header.hero { padding: 32px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+h1 { font-family: var(--round); font-weight: 800; font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1.05; margin: 0 0 12px; }
+h1 span { color: #e8458b; }
+.lead { font-size: 1.2rem; color: var(--muted); margin: 0 0 24px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
+.badges li { background: #fff; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.stores { display: flex; flex-wrap: wrap; gap: 12px; }
+.cta { display: inline-block; background: var(--sun); color: #3b2a00; font-family: var(--round); font-weight: 800; font-size: 1.15rem; padding: 12px 24px; border-radius: 999px; box-shadow: 0 4px 0 #d89c00; }
+.cta.later { background: #fff; color: var(--text); box-shadow: 0 4px 0 #cfd8cf; }
+.cta small { display: block; font-family: "Segoe UI", Roboto, system-ui, sans-serif; font-weight: 700; font-size: 0.8rem; }
+
+.phone { width: 100%; max-width: 300px; margin: 0 auto; border-radius: 34px; border: 10px solid #1f2a22; background: #1f2a22; box-shadow: 0 18px 40px rgba(20,60,20,.25); overflow: hidden; }
+.phone img { display: block; width: 100%; height: auto; border-radius: 24px; }
+
+section { padding: 40px 0; }
+h2 { font-family: var(--round); font-weight: 800; font-size: 2rem; margin: 0 0 8px; text-align: center; }
+.section-lead { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 32px; }
+
+.modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mode { background: var(--card); border-radius: 24px; padding: 24px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.mode h3 { font-family: var(--round); font-size: 1.5rem; margin: 0 0 6px; }
+.mode p { margin: 0; color: var(--muted); }
+.mode .icon { font-size: 2rem; }
+
+.shots { display: flex; gap: 20px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; }
+.shots figure { flex: 0 0 220px; margin: 0; scroll-snap-align: center; text-align: center; }
+.shots img { width: 100%; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+.shots figcaption { font-weight: 700; margin-top: 8px; }
+
+.parents { background: #fff; border-radius: 28px; padding: 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.parents ul { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 32px; }
+.parents li { margin-bottom: 8px; break-inside: avoid; }
+
+footer { padding: 32px 0 48px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+footer a { margin: 0 8px; }
+
+/* privacy page */
+.doc { max-width: 720px; margin: 24px auto 0; background: #fff; border-radius: 24px; padding: 24px 28px 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.doc h1 { font-size: 2rem; margin-bottom: 0.2rem; }
+.doc h2 { font-size: 1.2rem; text-align: left; margin-top: 1.8rem; }
+.doc .date { color: var(--muted); margin-top: 0; }
+
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .badges, .stores { justify-content: center; }
+  .modes { grid-template-columns: 1fr; }
+  .parents ul { columns: 1; }
+  .phone { max-width: 240px; }
+  .doc { padding: 20px 18px 28px; }
+}
