@@ -71,6 +71,12 @@ footer a { margin: 0 8px; }
 .unlock-info ul { margin: 0; padding-left: 1.2rem; }
 .unlock-info li { margin-bottom: 6px; }
 
+/* charity pledge */
+.giving { max-width: 720px; text-align: center; background: #fff8e1; border: 2px solid var(--sun); border-radius: 28px; padding: 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.giving .icon { font-size: 2.4rem; line-height: 1; margin-bottom: 8px; }
+.giving p { margin: 0 0 12px; font-size: 1.05rem; }
+.giving .giving-status { display: inline-block; margin: 8px 0 0; background: #fff; border-radius: 999px; padding: 6px 16px; font-weight: 700; font-size: 0.95rem; color: var(--muted); }
+
 /* privacy page */
 .doc { max-width: 720px; margin: 24px auto 0; background: #fff; border-radius: 24px; padding: 24px 28px 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
 .doc h1 { font-size: 2rem; margin-bottom: 0.2rem; }
@@ -91,4 +97,5 @@ footer a { margin: 0 8px; }
   .compare td::before { content: attr(data-label); display: block; font-weight: 800; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
   .compare td.full::before { color: #9a6a00; }
   .unlock-info { padding: 20px 18px; }
+  .giving { margin: 0 16px; padding: 24px 18px; }
 }
