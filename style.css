@@ -147,6 +147,11 @@ footer a { margin: 0 8px; }
 .settings-table th, .settings-table td { padding: 8px 14px; text-align: left; border-bottom: 1px solid #e6efe3; }
 .settings-table tbody tr:last-child td { border-bottom: 0; }
 .settings-table thead th { font-family: var(--round); background: #f3fbec; }
+.guide-shot { margin: 16px 0 20px; text-align: center; }
+.guide-shot > div { display: flex; justify-content: center; gap: 16px; }
+.guide-shot img { width: 100%; max-width: 240px; height: auto; border-radius: 22px; border: 6px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+.guide-shot.two img { max-width: 220px; min-width: 0; flex: 1 1 0; }
+.guide-shot figcaption { font-weight: 700; color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
 .shot-todo { margin: 16px 0; padding: 18px; border: 2px dashed #e8458b; border-radius: 16px; background: #fff0f6; color: #a3245c; font-weight: 700; font-size: 0.9rem; text-align: center; }
 
 /* privacy page */
@@ -181,7 +186,7 @@ footer a { margin: 0 8px; }
   .giving { margin: 0 16px; padding: 24px 18px; }
   .stats li { padding: 12px 18px; }
   #contact-form .row { grid-template-columns: 1fr; }
-  :target { scroll-margin-top: 110px; }
+  :target { scroll-margin-top: 130px; }
   .settings-table th, .settings-table td { padding: 8px 10px; }
   .ledger thead { display: none; }
   .ledger, .ledger tbody, .ledger tr, .ledger td { display: block; width: 100%; }
