@@ -90,6 +90,18 @@ footer a { margin: 0 8px; }
 .giving .more { margin: 16px 0 0; }
 .giving .giving-status { display: inline-block; margin: 8px 0 0; background: #fff; border-radius: 999px; padding: 6px 16px; font-weight: 700; font-size: 0.95rem; color: var(--muted); }
 
+/* charity page */
+.giving h1 { font-size: clamp(2rem, 5vw, 2.6rem); }
+.stats { display: flex; justify-content: center; gap: 16px; margin: 0 0 24px; padding: 0; list-style: none; }
+.stats li { background: var(--card); border-radius: 20px; padding: 14px 28px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.stats b { display: block; font-family: var(--round); font-size: 2rem; line-height: 1.1; color: var(--grass-dark); }
+.stats span { color: var(--muted); font-weight: 600; }
+.ledger { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--card); border-radius: 24px; box-shadow: 0 6px 18px rgba(0,0,0,.06); overflow: hidden; }
+.ledger th, .ledger td { padding: 14px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid #e6efe3; }
+.ledger tbody tr:last-child td { border-bottom: 0; }
+.ledger thead th { font-family: var(--round); background: #f3fbec; }
+.ledger tr.empty td { text-align: center; color: var(--muted); font-weight: 600; padding: 28px 20px; }
+
 /* privacy page */
 .doc { max-width: 720px; margin: 24px auto 0; background: #fff; border-radius: 24px; padding: 24px 28px 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
 .doc h1 { font-size: 2rem; margin-bottom: 0.2rem; }
@@ -115,4 +127,11 @@ footer a { margin: 0 8px; }
   .compare td.full::before { color: #9a6a00; }
   .unlock-info { padding: 20px 18px; }
   .giving { margin: 0 16px; padding: 24px 18px; }
+  .stats li { padding: 12px 18px; }
+  .ledger thead { display: none; }
+  .ledger, .ledger tbody, .ledger tr, .ledger td { display: block; width: 100%; }
+  .ledger tbody tr { border-bottom: 1px solid #e6efe3; padding: 8px 0; }
+  .ledger tbody tr:last-child { border-bottom: 0; }
+  .ledger td { border-bottom: 0; padding: 4px 20px; }
+  .ledger td[data-label]::before { content: attr(data-label) ": "; font-weight: 800; color: var(--muted); }
 }
