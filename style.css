@@ -102,6 +102,27 @@ footer a { margin: 0 8px; }
 .ledger thead th { font-family: var(--round); background: #f3fbec; }
 .ledger tr.empty td { text-align: center; color: var(--muted); font-weight: 600; padding: 28px 20px; }
 
+/* contact form */
+#contact-form { margin-top: 20px; }
+#contact-form label { display: block; font-weight: 700; margin: 16px 0 6px; }
+#contact-form .opt { font-weight: 400; color: var(--muted); }
+#contact-form input[type="text"], #contact-form input[type="email"], #contact-form select, #contact-form textarea {
+  width: 100%; font: inherit; color: var(--text); background: #fbfdf9; border: 2px solid #d7e6d2; border-radius: 14px; padding: 10px 14px; }
+#contact-form textarea { resize: vertical; min-height: 140px; }
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus { outline: none; border-color: var(--sun); background: #fff; box-shadow: 0 0 0 3px rgba(255,197,49,.3); }
+#contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+#contact-form .botcheck { display: none; }
+.bug-fields { margin: 16px 0 0; padding: 4px 18px 14px; border: 2px dashed #d7e6d2; border-radius: 18px; background: #f7fbf4; }
+.bug-fields legend { font-family: var(--round); font-weight: 800; padding: 0 6px; }
+.bug-fields[hidden] { display: none; }
+.hint { font-size: 0.9rem; color: var(--muted); margin: 10px 0 0; }
+#contact-form button.cta { margin-top: 20px; border: 0; cursor: pointer; }
+#contact-form button.cta:disabled { opacity: .6; cursor: wait; }
+.form-status { margin: 14px 0 0; font-weight: 700; }
+.form-status.ok { color: var(--grass-dark); }
+.form-status.error { color: #c0392b; }
+.alt-contact { margin: 28px 0 0; padding-top: 16px; border-top: 1px solid #e6efe3; color: var(--muted); }
+
 /* privacy page */
 .doc { max-width: 720px; margin: 24px auto 0; background: #fff; border-radius: 24px; padding: 24px 28px 32px; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
 .doc h1 { font-size: 2rem; margin-bottom: 0.2rem; }
@@ -128,6 +149,7 @@ footer a { margin: 0 8px; }
   .unlock-info { padding: 20px 18px; }
   .giving { margin: 0 16px; padding: 24px 18px; }
   .stats li { padding: 12px 18px; }
+  #contact-form .row { grid-template-columns: 1fr; }
   .ledger thead { display: none; }
   .ledger, .ledger tbody, .ledger tr, .ledger td { display: block; width: 100%; }
   .ledger tbody tr { border-bottom: 1px solid #e6efe3; padding: 8px 0; }

@@ -28,15 +28,80 @@
 </nav>
 
 <main class="wrap">
-<article class="doc">
+<article class="doc contact">
 <h1>Контакти</h1>
-<p>Очаквайте скоро.</p>
+<p>Имате въпрос, идея или нещо не работи? Пишете ни. Четем всяко съобщение и обикновено отговаряме до няколко дни.</p>
+
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+      data-lang="BG"
+      data-sending="Изпращане…"
+      data-ok="Благодарим! Съобщението ви е изпратено. Ще ви отговорим на посочения имейл."
+      data-fail="За съжаление съобщението не беше изпратено. Опитайте отново или ни пишете на eldergrove_myths@abv.bg.">
+  <input type="hidden" name="access_key" value="ce166262-7ced-419b-a8c1-59fb0f6fc4a2">
+  <input type="hidden" name="subject" value="Bobby Kids website message">
+  <input type="hidden" name="from_name" value="Bobby Kids website">
+  <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <label for="cf-reason">За какво става дума?</label>
+  <select id="cf-reason" name="reason" required>
+    <option value="" selected disabled>Изберете причина</option>
+    <option value="Feedback">Отзив</option>
+    <option value="Bug report">Проблем: нещо не работи</option>
+    <option value="Suggestion">Предложение или идея</option>
+    <option value="Question">Въпрос</option>
+    <option value="Purchase or restore">Проблем с покупка или възстановяване</option>
+    <option value="Other">Друго</option>
+  </select>
+
+  <fieldset class="bug-fields" hidden disabled>
+    <legend>За вашето устройство</legend>
+    <label for="cf-platform">Вид устройство</label>
+    <select id="cf-platform" name="platform" required>
+      <option value="" selected disabled>Изберете</option>
+      <option value="Android phone">Телефон с Android</option>
+      <option value="Android tablet">Таблет с Android</option>
+      <option value="iPhone">iPhone</option>
+      <option value="iPad">iPad</option>
+    </select>
+    <label for="cf-device">Модел <span class="opt">(по желание)</span></label>
+    <input id="cf-device" name="device" type="text" placeholder="Например Samsung Galaxy A52">
+    <label for="cf-version">Версия на приложението <span class="opt">(по желание)</span></label>
+    <input id="cf-version" name="app_version" type="text" placeholder="Например 1.0.2">
+    <p class="hint">Версията се вижда на страницата на Bobby Kids в Google Play („Информация за приложението“) или в App Store („История на версиите“).</p>
+  </fieldset>
+
+  <div class="row">
+    <div>
+      <label for="cf-name">Вашето име <span class="opt">(по желание)</span></label>
+      <input id="cf-name" name="name" type="text" autocomplete="name">
+    </div>
+    <div>
+      <label for="cf-email">Вашият имейл</label>
+      <input id="cf-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <label for="cf-message">Съобщение</label>
+  <textarea id="cf-message" name="message" rows="6" required></textarea>
+
+  <p class="hint">Използваме имейла ви само за да ви отговорим. Съобщенията се доставят чрез услугата Web3Forms. Вижте <a href="privacy.html#contact-form">Политиката за поверителност</a>.</p>
+
+  <button type="submit" class="cta">Изпрати</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<p class="alt-contact">Предпочитате имейл? Пишете ни на <a href="mailto:eldergrove_myths@abv.bg">eldergrove_myths@abv.bg</a></p>
 </article>
 </main>
 
 <footer>
-  <div class="wrap"><p>© 2026 Владимир Кюранов · Eldergrove Myths</p></div>
+  <div class="wrap">
+    <p><a href="privacy.html">Политика за поверителност</a> · <a href="contact.html">Контакт</a></p>
+    <p>© 2026 Владимир Кюранов · Eldergrove Myths</p>
+  </div>
 </footer>
+
+<script src="../contact.js"></script>
 
 </body>
 </html>

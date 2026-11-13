@@ -28,15 +28,80 @@
 </nav>
 
 <main class="wrap">
-<article class="doc">
+<article class="doc contact">
 <h1>Contacts</h1>
-<p>Coming soon.</p>
+<p>A question, an idea or something that does not work? Write to us. We read every message and usually reply within a few days.</p>
+
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+      data-lang="EN"
+      data-sending="Sending…"
+      data-ok="Thank you! Your message has been sent. We will reply to your email address."
+      data-fail="Sorry, the message could not be sent. Please try again, or email us at eldergrove_myths@abv.bg.">
+  <input type="hidden" name="access_key" value="ce166262-7ced-419b-a8c1-59fb0f6fc4a2">
+  <input type="hidden" name="subject" value="Bobby Kids website message">
+  <input type="hidden" name="from_name" value="Bobby Kids website">
+  <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <label for="cf-reason">What is it about?</label>
+  <select id="cf-reason" name="reason" required>
+    <option value="" selected disabled>Choose a reason</option>
+    <option value="Feedback">Feedback</option>
+    <option value="Bug report">Bug report: something does not work</option>
+    <option value="Suggestion">Suggestion or idea</option>
+    <option value="Question">Question</option>
+    <option value="Purchase or restore">Purchase or restore problem</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <fieldset class="bug-fields" hidden disabled>
+    <legend>About your device</legend>
+    <label for="cf-platform">Device type</label>
+    <select id="cf-platform" name="platform" required>
+      <option value="" selected disabled>Choose</option>
+      <option>Android phone</option>
+      <option>Android tablet</option>
+      <option>iPhone</option>
+      <option>iPad</option>
+    </select>
+    <label for="cf-device">Device model <span class="opt">(optional)</span></label>
+    <input id="cf-device" name="device" type="text" placeholder="For example Samsung Galaxy A52">
+    <label for="cf-version">App version <span class="opt">(optional)</span></label>
+    <input id="cf-version" name="app_version" type="text" placeholder="For example 1.0.2">
+    <p class="hint">You can find the version on the Bobby Kids page in Google Play (About this app) or the App Store (Version History).</p>
+  </fieldset>
+
+  <div class="row">
+    <div>
+      <label for="cf-name">Your name <span class="opt">(optional)</span></label>
+      <input id="cf-name" name="name" type="text" autocomplete="name">
+    </div>
+    <div>
+      <label for="cf-email">Your email</label>
+      <input id="cf-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <label for="cf-message">Message</label>
+  <textarea id="cf-message" name="message" rows="6" required></textarea>
+
+  <p class="hint">We use your email only to reply to you. Messages are delivered by the Web3Forms service. See the <a href="privacy.html#contact-form">Privacy Policy</a>.</p>
+
+  <button type="submit" class="cta">Send message</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<p class="alt-contact">Prefer email? Write to <a href="mailto:eldergrove_myths@abv.bg">eldergrove_myths@abv.bg</a></p>
 </article>
 </main>
 
 <footer>
-  <div class="wrap"><p>© 2026 Vladimir Kyuranov · Eldergrove Myths</p></div>
+  <div class="wrap">
+    <p><a href="privacy.html">Privacy policy</a> · <a href="contact.html">Contact</a></p>
+    <p>© 2026 Vladimir Kyuranov · Eldergrove Myths</p>
+  </div>
 </footer>
+
+<script src="contact.js"></script>
 
 </body>
 </html>
